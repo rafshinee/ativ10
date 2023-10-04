@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gerenciador de Contas Bancárias</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            align-items: flex-start;
+            width: 80%;
+        }
+
+        .form-container {
+            flex: 1;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin-right: 20px;
+        }
+
+        .visualizacao-container {
+            flex: 1;
+            padding: 20px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #lista-contas {
+            margin-top: 20px;
+        }
+
+        nav {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #007bff;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h2>Gerenciador de Contas Bancárias</h2>
+    </nav>
+    <div class="container">
+        <div class="form-container">
+            <h2>Inserir Conta</h2>
+            <label for="agencia">Agência:</label>
+            <input type="text" id="agencia"><br>
+
+            <label for="numero">Número:</label>
+            <input type="text" id="numero"><br>
+
+            <label for="tipo">Tipo de Conta:</label>
+            <select id="tipo">
+                <option value="Conta Corrente">Conta Corrente</option>
+                <option value="Conta Poupança">Conta Poupança</option>
+                <option value="Conta Universitária">Conta Universitária</option>
+            </select><br>
+
+            <label for="saldo">Saldo:</label>
+            <input type="text" id="saldo"><br>
+
+            <button onclick="inserirConta()">Inserir</button>
+            <button onclick="deletarConta()">Deletar</button>
+        </div>
+        <div class="visualizacao-container">
+            <h2>Extrato de Contas</h2>
+            <div id="lista-contas"></div>
+            <h3 id="saldo-total">Saldo Total: R$ 0.00</h3>
+        </div>
+    </div>
+    <footer>
+        &copy; 2023 Gerenciador de Contas Bancárias
+    </footer>
+
+    <script>
+        // Adicione o código JavaScript aqui
+        // ...
+    </script>
+</body>
+</html>
